@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2a2f43;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.card {
+    position: relative;
+    width: 260px;
+    height: 290px;
+    margin: 0 24px;
+    background: #fff;
+    border-radius: 24%;
+    transition: .4s ease-in-out;
+}
+
+.card:hover {
+    scale: 1.05;
+}
+
+.card img {
+    position: absolute;
+    top: -104px;
+    left: 12.5%;
+    width: 75%;
+    filter: drop-shadow(
+        0 0 30px rgba(0, 0, 0, .3)
+    );
+    transition: .4s ease-in-out;
+}
+
+.card:hover img {
+    transform: rotate(15deg);
+    filter: drop-shadow(
+        0 0 30px rgba(0, 0, 0, .36)
+    );
+}
+
+.card .content {
+    padding: 0 24px;
+    text-align: left;
+    margin-top: 120px;
+}
+
+.card .content h3 {
+    color: #2a2f43ee;
+    font-size: 32px;
+}
+
+.card .content p {
+    color: #2a2f4399;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: justify;
+    margin-top: 6px;
+}
+
+.card a {
+    cursor: pointer;
+    position: absolute;
+    left: 98px;
+    bottom: -32px;
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    background: linear-gradient(
+        112deg,
+        #fe8c30 15%,
+        #ff356d 100%
+    );
+}
+
+.card a i {
+    color: #fff;
+    font-size: 28px;
+}
