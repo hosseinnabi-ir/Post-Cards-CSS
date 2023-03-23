@@ -1,92 +1,122 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #2a2f43;
-    font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  background: #2a2f43;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", "sans-serif";
 }
 
 .container {
-    display: flex;
+  display: flex;
+  justify-content: center;
 }
 
 .card {
-    position: relative;
+  position: relative;
+  margin: 0 24px;
+  width: 260px;
+  height: 290px;
+  background: #fff;
+  border-radius: 24%;
+  transition: 0.4s ease-in-out;
+}
+
+/* Responsive layout - wrapping */
+/* max-width: 800px*/
+
+@media (max-width: 800px) {
+  body {
+    height: auto;
+    padding-top: 150px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+  .card {
+    margin: 0 auto 185px;
     width: 260px;
     height: 290px;
-    margin: 0 24px;
-    background: #fff;
-    border-radius: 24%;
-    transition: .4s ease-in-out;
+  }
+}
+
+/* Responsive layout - makes a one-column layout instead of a two-column layout */
+/* max-width: 1024px*/
+
+@media (max-width: 1024px) {
+  body {
+    height: auto;
+    padding-top: 150px;
+  }
+
+  .container {
+    flex-wrap: wrap;
+  }
+  .card {
+    margin: 0 auto 185px;
+    width: 260px;
+    height: 290px;
+  }
 }
 
 .card:hover {
-    scale: 1.05;
+  scale: 1.05;
 }
-
 .card img {
-    position: absolute;
-    top: -104px;
-    left: 12.5%;
-    width: 75%;
-    filter: drop-shadow(
-        0 0 30px rgba(0, 0, 0, .3)
-    );
-    transition: .4s ease-in-out;
+  position: absolute;
+  top: -104px;
+  left: 12.5%;
+  width: 75%;
+  filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.3));
+  transition: 0.4s ease-in-out;
 }
 
 .card:hover img {
-    transform: rotate(15deg);
-    filter: drop-shadow(
-        0 0 30px rgba(0, 0, 0, .36)
-    );
+  transform: rotate(15deg);
+  filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.36));
 }
 
 .card .content {
-    padding: 0 24px;
-    text-align: left;
-    margin-top: 120px;
+  padding: 0 24px;
+  text-align: left;
+  margin-top: 120px;
 }
 
-.card .content h3 {
-    color: #2a2f43ee;
-    font-size: 32px;
+.card h3 {
+  font-size: 32px;
+  color: #2a2f43ee;
 }
 
-.card .content p {
-    color: #2a2f4399;
-    font-size: 18px;
-    font-weight: 500;
-    text-align: justify;
-    margin-top: 6px;
+.card p {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: justify;
+  margin-top: 6px;
+  color: #2a2f4399;
 }
 
 .card a {
-    cursor: pointer;
-    position: absolute;
-    left: 98px;
-    bottom: -32px;
-    width: 64px;
-    height: 64px;
-    line-height: 64px;
-    text-align: center;
-    border-radius: 50%;
-    border: 5px solid #fff;
-    background: linear-gradient(
-        112deg,
-        #fe8c30 15%,
-        #ff356d 100%
-    );
+  cursor: pointer;
+  position: absolute;
+  left: 98px;
+  bottom: -32px;
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  background: linear-gradient(112deg, #fe8c30 15%, #ff356d 100%);
+  border-radius: 50%;
+  border: 5px solid #fff;
+  text-align: center;
 }
 
 .card a i {
-    color: #fff;
-    font-size: 28px;
+  color: #fff;
+  font-size: 28px;
 }
